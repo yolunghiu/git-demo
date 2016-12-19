@@ -89,6 +89,11 @@ $ git branch gh-pages
 $ git checkout gh-pages
 ```
 
+#### 删除远端提交过的文件（如readme.md）
+```
+$ git rm -r readme.md
+```
+
 #### 设置提交时不用输入账号密码
 1.添加.gitconfig文件
 2.长期存储密码：
