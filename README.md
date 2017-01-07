@@ -96,6 +96,7 @@ $ git rm -r readme.md
 
 #### 设置提交时不用输入账号密码
 1.添加.gitconfig文件到用户根目录(c盘下存储配置文件的目录)
+```
 [user]
     name = liuhy
     email = 190978752@qq.com
@@ -109,6 +110,6 @@ $ git rm -r readme.md
 [credential]
 [credential]
     helper = store
-
+```
 2.https方式长期存储密码：
-  git config --global credential.helper store
+`git config --global credential.helper store`
