@@ -89,6 +89,17 @@ $ git branch gh-pages
 $ git checkout gh-pages
 ```
 
+#### 删除远端分支
+```
+$ git push origin :gh-pages  
+// 冒号后面是要删除的分支名字
+```
+
+#### 删除本地分支
+```
+$ git branch -d gh-pages
+```
+
 #### 删除远端提交过的文件（如readme.md）
 ```
 $ git rm -r readme.md
