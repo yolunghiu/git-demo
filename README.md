@@ -124,3 +124,10 @@ $ git rm -r readme.md
 ```
 2.https方式长期存储密码：
 `git config --global credential.helper store`
+
+#### 撤销commit
+如果commit之后，又不想push上去了，直接用下面的命令撤销
+```
+$ git log       // 查看commit日志,找到需要回退的那次commit的哈希值
+$ git reset --hard commit_id    // 撤销
+```
