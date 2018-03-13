@@ -21,6 +21,7 @@
 	- [删除远端提交过的文件（如readme.md）](#删除远端提交过的文件如readmemd)
 	- [设置提交时不用输入账号密码](#设置提交时不用输入账号密码)
 	- [撤销commit](#撤销commit)
+	- [代码冲突](#代码冲突)
 
 <!-- /TOC -->
 
@@ -157,4 +158,22 @@ $ git rm -r readme.md
 ```
 $ git log       // 查看commit日志,找到需要回退的那次commit的哈希值
 $ git reset --hard commit_id    // 撤销
+```
+
+## 代码冲突常见解决方法
+```
+error: Your local changes to the following files would be overwritten by merge:
+        protected/config/main.php
+Please, commit your changes or stash them before you can merge.
+```
+1.如果希望保留本地改动，仅仅并入远程新文件
+```
+$ git stash
+$ git pull
+$ git stash pop
+```
+2.如果希望用代码库中的文件完全覆盖本地工作版本
+```
+$ git reset --hard
+$ git pull
 ```
