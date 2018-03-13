@@ -160,7 +160,7 @@ $ git log       // 查看commit日志,找到需要回退的那次commit的哈希
 $ git reset --hard commit_id    // 撤销
 ```
 
-## 代码冲突常见解决方法
+## 代码冲突
 ```
 error: Your local changes to the following files would be overwritten by merge:
         protected/config/main.php
