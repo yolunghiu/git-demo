@@ -1,33 +1,39 @@
-# git config
+# git basic
 
-## 系统中所有用户都可以使用该配置
+## git工作流程
 
-- `git config --system`
-- 配置文件所在位置: `/etc/gitconfig`
+工作区 --(add)--> 暂存区 --(commit)--> 本地仓库  ↔  远程仓库
 
-## 当前用户可以使用该配置
+## `git add [file]`
 
-- `git config --global`
-- 配置文件所在位置: `~/.gitconfig`
+- 将文件提交到暂存区
+- 可同时提交多个文件, 文件名用空格分隔
+- `*` 表示所有文件, `.` 表示当前目录下的文件
 
-## 当前项目可以使用该配置
+## `git rm --cached [file]`
 
-- `git config`, 该命令必须在.git文件夹内使用
-- 配置文件所在位置: `project/.git/config`
+- 删除暂存区某个文件提交记录
 
-## 配置内容
+## `git commit -m "msg"`
 
-- 配置用户名: `git config --global user.name sadicLiu`
-- 配置邮箱: `git config --global user.email 190978752@qq.com`
-- 配置编译器: `git config core.editor sublime`
-- 查看配置信息: `git config --list`
+- 将暂存区的文件提交到本地仓库
+
+## log
+
+- `git log`: 查看详细日志
+- `git log --pretty=oneline`: 查看简单格式的日志输出
+
+## 工作区常用命令
+
+- 查看本地仓库文件(commit过的)和当前工作区文件的区别: `git diff [file]`
+- 从本地仓库恢复文件: `git checkout [file]`
+
+## 本地仓库文件的移动和删除
+
+- 移动文件: `git mv [file] [dir]`
+- 删除文件: `git rm [file]`
+**这两个命令是**
 
 
-
-
-
-
-
-
-
+ 
 
