@@ -14,7 +14,23 @@
 ## 相关命令
 
 1. `git stash`: 能够将所有未提交的修改（工作区和暂存区）保存至堆栈中, 用于后续恢复当前工作目录.
-2. 
+2. `git stash save "message"`: 作用等同于 `git stash`, 区别是可以加一些注释.
+3. `git stash list`: 查看当前stash中的内容
+4. `git stash pop`: 将当前stash中的内容弹出, 并应用到当前分支对应的工作目录上. 注：该命令将堆栈中最近保存的内容删除. 
+如果从stash中恢复的内容和当前目录中的内容发生了冲突, 也就是说, 恢复的内容和当前目录修改了同一行的数据, 
+那么会提示报错, 需要解决冲突, 可以通过创建新的分支来解决冲突.
+5. `git stash apply`: 可以使用 `git stash apply` + stash名字（如stash@{1}）指定恢复哪个stash到当前的工作目录. 
+不同于 `git stash pop`, 该命令不会将内容从堆栈中删除.
+6. `git stash drop [stash_name]`: 从堆栈中移除某个指定的stash
+7. `git stash clear`: 从堆栈中移除某个指定的stash.
+8. 
+
+
+
+
+
+
+
 
 
 
