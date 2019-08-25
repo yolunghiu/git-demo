@@ -23,7 +23,21 @@
 不同于 `git stash pop`, 该命令不会将内容从堆栈中删除.
 6. `git stash drop [stash_name]`: 从堆栈中移除某个指定的stash
 7. `git stash clear`: 从堆栈中移除某个指定的stash.
-8. 
+8. 查看stash内容和当前工作区的差异
+   - `git stash show`: 查看堆栈中最新保存的stash和当前目录的差异.
+   - `git stash show stash@{1}`: 查看指定的stash和当前目录差异.
+   - `git stash show -p`: 查看详细的不同.
+9. `git stash branch`: 从最新的stash创建分支.  
+   - 应用场景：当储藏了部分工作, 暂时不去理会, 继续在当前分支进行开发. 
+   后续想将stash中的内容恢复到当前工作目录时, 如果是针对同一个文件的修改（即便不是同行数据）, 那么可能会发生冲突, 恢复失败.
+   这里通过创建新的分支来解决. 可以用于解决stash中的内容和当前目录的内容发生冲突的情景.
+   - 发生冲突时，需手动解决冲突.
+
+
+   
+   
+
+
 
 
 
